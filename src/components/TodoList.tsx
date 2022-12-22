@@ -46,14 +46,18 @@ const TodoList = ({ db }) => {
             <div className="row ">
               <FormCheck
                 key={index}
-                checked={todo.done}
                 className="mb-2 col-8"
-                onChange={() => changeTodoCompletion(todo)}
                 label={todo.title}
               />
 
-              <div className="col-4 d-flex justify-content-between">
-                <input type="checkbox" className="form-check-input custom" name="" id="" />
+              <div className="col-4 mb-2 d-flex justify-content-between">
+                <input
+                  type="checkbox"
+                  className="custom form-check-input"
+                  name="custom"
+                  checked={todo.done}
+                  onChange={() => changeTodoCompletion(todo)} />
+
                 <div className="icons edit"></div>
                 <div className="icons delete"></div>
               </div>
