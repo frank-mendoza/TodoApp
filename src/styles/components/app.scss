@@ -1,0 +1,34 @@
+.main {
+  width: 400px !important;
+}
+
+.spinner {
+  justify-content: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.edit {
+    background-image: url('../../img/edit-2.svg');
+  }
+  
+  &.delete {
+    background-image: url('../../img/x-circle.svg');
+  }
+}
+
+.form-check-input {
+  display: none;
+  border: 3px solid black;
+
+  &.custom {
+    display: block;
+  }
+}
