@@ -1,44 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Button } from 'react-bootstrap'
-
-import { ref, push } from "firebase/database";
 
 // Import firebase configuration from firebase.ts file
 // @ts-ignore
 
-const TodoForm = ({db}) => {
-
-  const [title, setTitle] = useState("");
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let target = e.target
-    let value = target.value
-    
-    setTitle(value);
-  };
-
-  const addTodo = () => {
-    const todoRef = ref(db, "/todos");
-    const todo = {
-      title,
-      done: false,
-    };
-
-    setTitle('')
-
-    push(todoRef, todo);
-  };
+const TodoForm = ({ title, handleChange,addTodo}) => {
 
   return (
-    <Form onSubmit={(e) => e.preventDefault()}>
+    <Form 
+      onSubmit={(e) => e.preventDefault()}
+      className='pt-4 border-top'
+    >
       <Form.Control
         onChange={handleChange}
         value={title}
+        className='border border-2 border-dark py-2 custom-input'
+        placeholder='Enter new task'
       />
       <Button type="submit"
-        className="mt-3"
+        className="mt-3 btn btn-dark border-dark"
         disabled={title === '' ? true : false}
-        onClick={addTodo}
+        onClick={() => addTodo()}
       >
         Submit
       </Button>
