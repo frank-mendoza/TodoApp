@@ -36,7 +36,7 @@ const App = () => {
   };
 
   return (
-    <div className='container-sm container-md align-items-start main'>
+    <div className='container-sm py-4 container-md align-items-start main'>
       <TodoList
         db={db}
       />

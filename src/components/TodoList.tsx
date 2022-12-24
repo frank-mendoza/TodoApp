@@ -93,7 +93,7 @@ const TodoList = ({ db }) => {
   
   return (
     <div className="pb-4">
-      <h1 className="fs-2 text-center mt-5 mb-4">Todo List With Firebase</h1>
+      <h1 className="fs-2 text-center mt-5 mb-4">Todo App With Firebase</h1>
       {!loading ?
         <div className="spinner">
           <Spinner color="warning" className=" mt-5" />
@@ -108,7 +108,7 @@ const TodoList = ({ db }) => {
                 label={todo.title}
               />
 
-              <div className="col-4 d-flex justify-content-end gap-4 align-items-center">
+              <div className="col-4 d-flex justify-content-end gap-3 gap-sm-4 align-items-center">
                 <input
                   type="checkbox"
                   className="custom form-check-input"
@@ -134,7 +134,7 @@ const TodoList = ({ db }) => {
         backdrop="static"
         keyboard={false}
       >
-        <ModalBody className="p-5">
+        <ModalBody className="p-3 p-sm-4">
           <div
             className="icons delete close"
             onClick={() => closeModal()}></div>
