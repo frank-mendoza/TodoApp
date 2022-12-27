@@ -172,10 +172,6 @@ const TodoList = ({ db }) => {
         keyboard={false}
       >
         <ModalBody className="p-3 p-sm-4">
-          <div
-            className="icons delete close"
-            onClick={() => closeModal()}
-          ></div>
           <Form onSubmit={(e) => e.preventDefault()}>
             <div className="mb-2 d-flex w-100 align-items-center">
               {" "}
