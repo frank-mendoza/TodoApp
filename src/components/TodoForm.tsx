@@ -14,13 +14,14 @@ const TodoForm = ({ title, handleChange,addTodo}) => {
       <Form.Control
         onChange={handleChange}
         value={title}
-        className='border border-2 border-dark py-2 custom-input'
+        className='border border-2 border-dark py-3 custom-input'
         placeholder='Enter new task'
       />
       <Button type="submit"
-        className="mt-3 btn btn-dark border-dark"
+        className="mt-3 btn btn-dark border-dark w-100"
         disabled={title === '' ? true : false}
         onClick={() => addTodo()}
+        size='lg'
       >
         Submit
       </Button>
